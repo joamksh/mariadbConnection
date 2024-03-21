@@ -1,8 +1,8 @@
-package com.example.mariaConnection;
+package com.example.mariaConnection.test;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.example.mariaConnection.Test;
+import com.example.mariaConnection.test.Test;
 import java.util.Optional;
 
 @Repository

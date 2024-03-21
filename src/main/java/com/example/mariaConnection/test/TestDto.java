@@ -1,4 +1,4 @@
-package com.example.mariaConnection;
+package com.example.mariaConnection.test;
 
 import lombok.Getter;
 import lombok.Setter;
