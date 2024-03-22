@@ -22,7 +22,10 @@ public class Post {
 
     private String title;
     private Integer price;
-    private String images;
+
+    @ElementCollection
+    private List<String> images;
+
     private String contents;
     private Integer groupSize;
     private Integer curGroupSize;
@@ -31,7 +34,7 @@ public class Post {
     @CreationTimestamp
     private LocalDateTime createdAt;
 
-    @CreationTimestamp
+
     private LocalDateTime closedAt;
 
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)

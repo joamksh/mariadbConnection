@@ -20,4 +20,9 @@ public class UserLikePost {
 
     @Column(name = "post_id")
     private Integer postId;
+
+    public void setPost(Integer postId) {
+        this.postId = postId;
+    }
+
 }
