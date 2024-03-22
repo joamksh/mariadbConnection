@@ -5,7 +5,6 @@ import com.example.mariaConnection.entity.User;
 
 import java.util.List;
 
-
-public interface PostService {
-    List<Post> getPostsByUser(User user);
+public interface UserLikePostService {
+    List<Post> getLikedPostsByUser(User user);
 }
