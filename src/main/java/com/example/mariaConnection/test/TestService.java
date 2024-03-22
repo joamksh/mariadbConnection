@@ -1,9 +1,9 @@
-package com.example.mariaConnection;
+package com.example.mariaConnection.test;
 
+import com.example.mariaConnection.test.Test;
+import com.example.mariaConnection.test.TestRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import com.example.mariaConnection.TestDto;
 
 @Service
 @RequiredArgsConstructor

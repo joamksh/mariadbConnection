@@ -1,4 +1,4 @@
-package com.example.mariaConnection;
+package com.example.mariaConnection.test;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

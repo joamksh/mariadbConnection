@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+</head>
+<body>
+<h1>User Information</h1>
+<p><strong>User ID:</strong> <span id="userId"></span></p>
+<p><strong>Nickname:</strong> <span id="nickname"></span></p>
+<p><strong>Rating:</strong> <span id="rating"></span></p>
+<p><strong>Profile:</strong> <span id="profile"></span></p>
+
+<h1>User Like Posts</h1>
+<ul id="userLikePosts">
+</ul>
+
+<h1>User Posts</h1>
+<ul id="userPosts">
+</ul>
+
+<script>
+    // JSON 데이터 가져오기
+    const data = {
+        "userId": "92ba146b-ba60-4b20-b49c-78baf6a09b0f",
+        "nickname": "수현",
+        "rating": 5,
+        "profile": "프로필",
+        "userLikePosts": [
+            {
+                "id": 1,
+                "postId": 1
+            },
+            {
+                "id": 2,
+                "postId": 2
+            }
+        ],
+        "userPosts": [
+            {
+                "id": 1,
+                "title": "게시물 제목 1",
+                "price": 1000,
+                "images": "게시물 이미지 1",
+                "groupSize": 5,
+                "createdAt": "2024-03-25T15:30:00",
+                "ingredients": [
+                    {
+                        "name": "감자"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "게시물 제목 2",
+                "price": 1500,
+                "images": "게시물 이미지 2",
+                "groupSize": 3,
+                "createdAt": "2024-03-25T16:45:00",
+                "ingredients": [
+                    {
+                        "name": "당근"
+                    }
+                ]
+            }
+        ]
+    };
+
+    // 데이터 채우기
+    document.getElementById('userId').textContent = data.userId;
+    document.getElementById('nickname').textContent = data.nickname;
+    document.getElementById('rating').textContent = data.rating;
+    document.getElementById('profile').textContent = data.profile;
+
+    // 좋아하는 게시물 목록 채우기
+    const userLikePosts = document.getElementById('userLikePosts');
+    data.userLikePosts.forEach(post => {
+        const li = document.createElement('li');
+        li.textContent = `Post ID: ${post.postId}`;
+        userLikePosts.appendChild(li);
+    });
+
+    // 작성한 게시물 목록 채우기
+    const userPosts = document.getElementById('userPosts');
+    data.userPosts.forEach(post => {
+        const li = document.createElement('li');
+        li.textContent = `Post Title: ${post.title}, Price: ${post.price}, Created At: ${post.createdAt}, Ingredients: ${post.ingredients.map(ingredient => ingredient.name).join(', ')}`;
+        userPosts.appendChild(li);
+    });
+</script>
+</body>
+</html>
